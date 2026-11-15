@@ -1,0 +1,89 @@
+[
+{"name":"Attack","season":2026,"role":"tank","mech":84,"iq":82,"pool":62,"mental":78,"heroes":["Winston","D.Va"],"note":"Team Liquid"},
+{"name":"TR33","season":2026,"role":"dps","mech":90,"iq":84,"pool":72,"mental":80,"heroes":["Sojourn","Genji","Reaper"],"note":"Team Liquid"},
+{"name":"zeruhh","season":2026,"role":"dps","mech":88,"iq":82,"pool":70,"mental":78,"heroes":["Tracer","Genji"],"note":"Team Liquid"},
+{"name":"Vega","season":2026,"role":"sup","mech":82,"iq":86,"pool":76,"mental":82,"heroes":["Ana","Baptiste"],"note":"Team Liquid"},
+{"name":"KIVIS","season":2026,"role":"sup","mech":80,"iq":84,"pool":74,"mental":78,"heroes":["Lúcio","Kiriko"],"note":"Team Liquid"},
+{"name":"UltraViolet","season":2026,"role":"sup","mech":78,"iq":84,"pool":72,"mental":76,"heroes":["Ana","Zenyatta"],"note":"Team Liquid"},
+
+{"name":"Kellan","season":2026,"role":"tank","mech":84,"iq":80,"pool":60,"mental":76,"heroes":["Winston","D.Va"],"note":"Dallas Fuel"},
+{"name":"Kronik","season":2026,"role":"dps","mech":87,"iq":82,"pool":68,"mental":78,"heroes":["Sojourn","Tracer"],"note":"Dallas Fuel"},
+{"name":"SeonJun","season":2026,"role":"dps","mech":86,"iq":80,"pool":66,"mental":74,"heroes":["Genji","Tracer"],"note":"Dallas Fuel"},
+{"name":"Cjay","season":2026,"role":"sup","mech":80,"iq":84,"pool":74,"mental":80,"heroes":["Ana","Baptiste"],"note":"Dallas Fuel"},
+{"name":"Lukemino","season":2026,"role":"sup","mech":78,"iq":82,"pool":72,"mental":76,"heroes":["Lúcio","Kiriko"],"note":"Dallas Fuel"},
+
+{"name":"Smurf","season":2026,"role":"tank","mech":88,"iq":85,"pool":70,"mental":82,"heroes":["Winston","D.Va","Reinhardt"],"note":"Disguised"},
+{"name":"PGE","season":2026,"role":"dps","mech":85,"iq":80,"pool":64,"mental":74,"heroes":["Tracer","Sombra"],"note":"Disguised"},
+{"name":"ryan","season":2026,"role":"dps","mech":84,"iq":78,"pool":62,"mental":72,"heroes":["Sojourn","Tracer"],"note":"Disguised"},
+
+{"name":"Hawk","season":2026,"role":"tank","mech":84,"iq":82,"pool":70,"mental":78,"heroes":["Roadhog","D.Va","Sigma"],"note":"Spacestation"},
+{"name":"Lethal","season":2026,"role":"dps","mech":84,"iq":78,"pool":62,"mental":72,"heroes":["Tracer","Sombra"],"note":"Spacestation"},
+{"name":"Sugarfree","season":2026,"role":"dps","mech":83,"iq":78,"pool":60,"mental":72,"heroes":["Sojourn","Tracer"],"note":"Spacestation"},
+{"name":"Galaa","season":2026,"role":"sup","mech":84,"iq":82,"pool":70,"mental":76,"heroes":["Ana","Kiriko"],"note":"Spacestation"},
+{"name":"Admiral","season":2026,"role":"sup","mech":80,"iq":80,"pool":66,"mental":74,"heroes":["Ana","Kiriko"],"note":"Spacestation"},
+
+{"name":"Painkiller","season":2026,"role":"tank","mech":82,"iq":80,"pool":60,"mental":74,"heroes":["Winston","D.Va"],"note":"NTMR"},
+{"name":"Rokit","season":2026,"role":"dps","mech":82,"iq":76,"pool":58,"mental":70,"heroes":["Tracer","Sombra"],"note":"NTMR"},
+{"name":"JUTSU","season":2026,"role":"dps","mech":82,"iq":76,"pool":58,"mental":70,"heroes":["Sojourn","Genji"],"note":"NTMR"},
+{"name":"Virtual","season":2026,"role":"sup","mech":78,"iq":80,"pool":66,"mental":72,"heroes":["Lúcio","Kiriko"],"note":"NTMR"},
+{"name":"Lep","season":2026,"role":"sup","mech":78,"iq":78,"pool":64,"mental":72,"heroes":["Ana","Baptiste"],"note":"NTMR"},
+
+{"name":"TVNT","season":2026,"role":"tank","mech":85,"iq":82,"pool":68,"mental":78,"heroes":["D.Va","Winston"],"note":"Twisted Minds"},
+{"name":"Quartz","season":2026,"role":"dps","mech":89,"iq":82,"pool":68,"mental":76,"heroes":["Sojourn","Ashe","Widowmaker"],"note":"Twisted Minds"},
+{"name":"Youbi","season":2026,"role":"dps","mech":86,"iq":80,"pool":62,"mental":72,"heroes":["Genji","Echo"],"note":"Twisted Minds"},
+{"name":"JaeWoo","season":2026,"role":"dps","mech":85,"iq":80,"pool":64,"mental":74,"heroes":["Tracer","Sombra"],"note":"Twisted Minds"},
+{"name":"Simple","season":2026,"role":"sup","mech":83,"iq":84,"pool":74,"mental":80,"heroes":["Ana","Baptiste","Zenyatta"],"note":"Twisted Minds"},
+{"name":"FunnyAstro","season":2026,"role":"sup","mech":80,"iq":86,"pool":76,"mental":80,"heroes":["Lúcio","Brigitte","Kiriko"],"note":"Twisted Minds"},
+
+{"name":"eisgnom","season":2026,"role":"tank","mech":84,"iq":82,"pool":68,"mental":76,"heroes":["Reinhardt","Winston","D.Va"],"note":"Virtus.pro"},
+{"name":"Kevster","season":2026,"role":"dps","mech":90,"iq":84,"pool":74,"mental":80,"heroes":["Tracer","Sombra","Genji"],"note":"Virtus.pro"},
+{"name":"Seicoe","season":2026,"role":"dps","mech":86,"iq":80,"pool":64,"mental":74,"heroes":["Sojourn","Ashe"],"note":"Virtus.pro"},
+{"name":"FiXa","season":2026,"role":"sup","mech":80,"iq":82,"pool":70,"mental":76,"heroes":["Lúcio","Kiriko"],"note":"Virtus.pro"},
+{"name":"Landon","season":2026,"role":"sup","mech":82,"iq":84,"pool":72,"mental":78,"heroes":["Ana","Baptiste","Kiriko"],"note":"Virtus.pro / Al Qadsiah"},
+
+{"name":"KroxZ","season":2026,"role":"tank","mech":80,"iq":78,"pool":58,"mental":72,"heroes":["Reinhardt","Winston"],"note":"Team Peps"},
+{"name":"FDGod","season":2026,"role":"sup","mech":82,"iq":84,"pool":70,"mental":76,"heroes":["Lúcio","Brigitte"],"note":"Team Peps"},
+{"name":"Xeriongdh","season":2026,"role":"sup","mech":78,"iq":78,"pool":62,"mental":70,"heroes":["Ana","Baptiste"],"note":"Team Peps"},
+
+{"name":"DONGHAK","season":2026,"role":"tank","mech":87,"iq":84,"pool":70,"mental":80,"heroes":["Winston","D.Va","Ramattra"],"note":"T1"},
+{"name":"Proud","season":2026,"role":"dps","mech":86,"iq":82,"pool":66,"mental":76,"heroes":["Sojourn","Ashe"],"note":"T1"},
+{"name":"ZEST","season":2026,"role":"dps","mech":85,"iq":80,"pool":64,"mental":74,"heroes":["Genji","Tracer"],"note":"T1"},
+{"name":"skewed","season":2026,"role":"sup","mech":84,"iq":86,"pool":76,"mental":82,"heroes":["Lúcio","Kiriko"],"note":"T1"},
+{"name":"Bliss","season":2026,"role":"sup","mech":82,"iq":84,"pool":74,"mental":80,"heroes":["Ana","Baptiste"],"note":"T1"},
+
+{"name":"Hanbin","season":2026,"role":"tank","mech":90,"iq":88,"pool":78,"mental":84,"heroes":["Sigma","Zarya","Junker Queen"],"note":"Team Falcons"},
+{"name":"Someone","season":2026,"role":"tank","mech":91,"iq":86,"pool":72,"mental":84,"heroes":["Winston","D.Va"],"note":"Team Falcons"},
+{"name":"Mer1t","season":2026,"role":"dps","mech":90,"iq":84,"pool":70,"mental":80,"heroes":["Sojourn","Widowmaker","Ashe"],"note":"Team Falcons"},
+{"name":"SP1NT","season":2026,"role":"dps","mech":86,"iq":82,"pool":68,"mental":76,"heroes":["Tracer","Genji","Sombra"],"note":"Team Falcons"},
+{"name":"Checkmate","season":2026,"role":"dps","mech":85,"iq":80,"pool":64,"mental":72,"heroes":["Symmetra","Genji"],"note":"Team Falcons / Al Qadsiah"},
+{"name":"Fielder","season":2026,"role":"sup","mech":84,"iq":90,"pool":78,"mental":86,"heroes":["Ana","Baptiste"],"note":"Team Falcons"},
+{"name":"ChiYo","season":2026,"role":"sup","mech":84,"iq":88,"pool":78,"mental":84,"heroes":["Lúcio","Kiriko"],"note":"Team Falcons"},
+
+{"name":"JunBin","season":2026,"role":"tank","mech":88,"iq":84,"pool":72,"mental":80,"heroes":["Wrecking Ball","Sigma","Winston"],"note":"Crazy Raccoon"},
+{"name":"MAX","season":2026,"role":"tank","mech":84,"iq":82,"pool":66,"mental":76,"heroes":["D.Va","Winston"],"note":"Crazy Raccoon"},
+{"name":"STALK3R","season":2026,"role":"dps","mech":90,"iq":84,"pool":72,"mental":80,"heroes":["Tracer","Genji","Sombra"],"note":"Crazy Raccoon"},
+{"name":"Heesang","season":2026,"role":"dps","mech":89,"iq":86,"pool":74,"mental":80,"heroes":["Tracer","Sojourn"],"note":"Crazy Raccoon"},
+{"name":"Lip","season":2026,"role":"dps","mech":89,"iq":90,"pool":74,"mental":84,"heroes":["Sombra","Ashe","Tracer"],"note":"Crazy Raccoon"},
+{"name":"CH0R0NG","season":2026,"role":"sup","mech":82,"iq":84,"pool":72,"mental":78,"heroes":["Lúcio","Kiriko","Brigitte"],"note":"Crazy Raccoon"},
+{"name":"vigilante","season":2026,"role":"sup","mech":82,"iq":86,"pool":74,"mental":80,"heroes":["Ana","Baptiste","Zenyatta"],"note":"Crazy Raccoon"},
+
+{"name":"Bernar","season":2026,"role":"tank","mech":84,"iq":82,"pool":66,"mental":76,"heroes":["Sigma","Zarya"],"note":"ZETA DIVISION"},
+{"name":"Mealgaru","season":2026,"role":"tank","mech":82,"iq":80,"pool":64,"mental":74,"heroes":["Winston","D.Va"],"note":"ZETA DIVISION"},
+{"name":"Proper","season":2026,"role":"dps","mech":94,"iq":88,"pool":80,"mental":84,"heroes":["Tracer","Genji","Sojourn"],"note":"ZETA DIVISION"},
+{"name":"knife","season":2026,"role":"dps","mech":86,"iq":82,"pool":66,"mental":76,"heroes":["Sombra","Tracer"],"note":"ZETA DIVISION"},
+{"name":"Shu","season":2026,"role":"sup","mech":86,"iq":88,"pool":76,"mental":82,"heroes":["Ana","Baptiste","Kiriko"],"note":"ZETA DIVISION"},
+{"name":"Viol2t","season":2026,"role":"sup","mech":84,"iq":90,"pool":76,"mental":84,"heroes":["Baptiste","Zenyatta"],"note":"ZETA DIVISION"},
+
+{"name":"Guxue","season":2026,"role":"tank","mech":88,"iq":84,"pool":70,"mental":78,"heroes":["Winston","D.Va","Reinhardt"],"note":"Weibo Gaming"},
+{"name":"Leave","season":2026,"role":"dps","mech":90,"iq":86,"pool":76,"mental":82,"heroes":["Tracer","Genji","Pharah"],"note":"Weibo Gaming"},
+{"name":"Mag","season":2026,"role":"tank","mech":84,"iq":80,"pool":62,"mental":74,"heroes":["Winston","Reinhardt","Doomfist"],"note":"All Gamers"},
+{"name":"LeeSooMin","season":2026,"role":"sup","mech":80,"iq":80,"pool":66,"mental":72,"heroes":["Ana","Baptiste"],"note":"Weibo Gaming"},
+{"name":"MAKA","season":2026,"role":"sup","mech":78,"iq":78,"pool":64,"mental":70,"heroes":["Lúcio","Brigitte"],"note":"Weibo Gaming"},
+
+{"name":"Insane","season":2026,"role":"dps","mech":82,"iq":78,"pool":60,"mental":72,"heroes":["Genji","Tracer"],"note":"All Gamers"},
+{"name":"LiGe","season":2026,"role":"tank","mech":80,"iq":78,"pool":60,"mental":70,"heroes":["Sigma","D.Va"],"note":"All Gamers"},
+
+{"name":"ZIYAD","season":2026,"role":"tank","mech":85,"iq":82,"pool":68,"mental":76,"heroes":["D.Va","Hazard","Zarya"],"note":"Al Qadsiah"},
+{"name":"LBBD7","season":2026,"role":"dps","mech":86,"iq":80,"pool":66,"mental":74,"heroes":["Sojourn","Ashe","Cassidy"],"note":"Al Qadsiah"},
+{"name":"Kellex","season":2026,"role":"sup","mech":82,"iq":84,"pool":72,"mental":78,"heroes":["Ana","Baptiste","Kiriko"],"note":"Al Qadsiah"}
+]

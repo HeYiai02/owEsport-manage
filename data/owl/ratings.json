@@ -1,0 +1,602 @@
+{
+"fleta|2018": {
+"name": "Fleta",
+"mech": 80,
+"iq": 77,
+"pool": 90,
+"mental": 80,
+"overall": 81,
+"heroes": [
+"Widowmaker",
+"Genji",
+"Pharah",
+"Soldier: 76",
+"Cassidy"
+],
+"minutes": 1931,
+"maps": 150,
+"low": false,
+"src": "OWL 2018 · 1931 分钟 / 150 张图"
+},
+"ryujehong|2018": {
+"name": "Ryujehong",
+"mech": 80,
+"iq": 80,
+"pool": 84,
+"mental": 78,
+"overall": 81,
+"heroes": [
+"Zenyatta",
+"Winston",
+"Moira",
+"Mercy"
+],
+"minutes": 1975,
+"maps": 152,
+"low": false,
+"src": "OWL 2018 · 1975 分钟 / 152 张图"
+},
+"birdring|2018": {
+"name": "Birdring",
+"mech": 78,
+"iq": 78,
+"pool": 90,
+"mental": 81,
+"overall": 81,
+"heroes": [
+"Widowmaker",
+"Tracer",
+"Cassidy",
+"Genji",
+"Soldier: 76"
+],
+"minutes": 2031,
+"maps": 163,
+"low": false,
+"src": "OWL 2018 · 2031 分钟 / 163 张图"
+},
+"profit|2018": {
+"name": "Profit",
+"mech": 85,
+"iq": 88,
+"pool": 90,
+"mental": 85,
+"overall": 87,
+"heroes": [
+"Tracer",
+"Junkrat",
+"Genji",
+"Brigitte",
+"Hanzo"
+],
+"minutes": 2467,
+"maps": 203,
+"low": false,
+"src": "OWL 2018 · 2467 分钟 / 203 张图"
+},
+"carpe|2018": {
+"name": "Carpe",
+"mech": 84,
+"iq": 85,
+"pool": 76,
+"mental": 78,
+"overall": 82,
+"heroes": [
+"Widowmaker",
+"Tracer",
+"Cassidy"
+],
+"minutes": 2467,
+"maps": 195,
+"low": false,
+"src": "OWL 2018 · 2467 分钟 / 195 张图"
+},
+"jjonak|2018": {
+"name": "Jjonak",
+"mech": 89,
+"iq": 83,
+"pool": 68,
+"mental": 87,
+"overall": 81,
+"heroes": [
+"Zenyatta",
+"Moira"
+],
+"minutes": 2632,
+"maps": 207,
+"low": false,
+"src": "OWL 2018 · 2632 分钟 / 207 张图"
+},
+"fissure|2018": {
+"name": "Fissure",
+"mech": 82,
+"iq": 85,
+"pool": 76,
+"mental": 86,
+"overall": 83,
+"heroes": [
+"Winston",
+"Reinhardt",
+"Orisa"
+],
+"minutes": 1771,
+"maps": 136,
+"low": false,
+"src": "OWL 2018 · 1771 分钟 / 136 张图"
+},
+"gesture|2019": {
+"name": "Gesture",
+"mech": 79,
+"iq": 78,
+"pool": 90,
+"mental": 77,
+"overall": 80,
+"heroes": [
+"Reinhardt",
+"Orisa",
+"Winston",
+"Sigma",
+"Wrecking Ball"
+],
+"minutes": 1736,
+"maps": 137,
+"low": false,
+"src": "OWL 2019 · 1736 分钟 / 137 张图"
+},
+"mano|2019": {
+"name": "Mano",
+"mech": 80,
+"iq": 81,
+"pool": 84,
+"mental": 81,
+"overall": 81,
+"heroes": [
+"Reinhardt",
+"Orisa",
+"Winston",
+"Wrecking Ball"
+],
+"minutes": 1944,
+"maps": 157,
+"low": false,
+"src": "OWL 2019 · 1944 分钟 / 157 张图"
+},
+"moth|2019": {
+"name": "Moth",
+"mech": 77,
+"iq": 86,
+"pool": 76,
+"mental": 83,
+"overall": 81,
+"heroes": [
+"Lúcio",
+"Baptiste",
+"Mercy"
+],
+"minutes": 2334,
+"maps": 187,
+"low": false,
+"src": "OWL 2019 · 2334 分钟 / 187 张图"
+},
+"super|2019": {
+"name": "Super",
+"mech": 84,
+"iq": 81,
+"pool": 76,
+"mental": 82,
+"overall": 81,
+"heroes": [
+"Reinhardt",
+"Winston",
+"Orisa"
+],
+"minutes": 1652,
+"maps": 132,
+"low": false,
+"src": "OWL 2019 · 1652 分钟 / 132 张图"
+},
+"twilight|2019": {
+"name": "Twilight",
+"mech": 89,
+"iq": 84,
+"pool": 76,
+"mental": 85,
+"overall": 83,
+"heroes": [
+"Zenyatta",
+"Ana",
+"Moira"
+],
+"minutes": 1963,
+"maps": 160,
+"low": false,
+"src": "OWL 2019 · 1963 分钟 / 160 张图"
+},
+"decay|2020": {
+"name": "Decay",
+"mech": 86,
+"iq": 83,
+"pool": 90,
+"mental": 84,
+"overall": 86,
+"heroes": [
+"Zarya",
+"Tracer",
+"Ashe",
+"Reaper",
+"Cassidy"
+],
+"minutes": 1082,
+"maps": 87,
+"low": false,
+"src": "OWL 2020 · 1082 分钟 / 87 张图"
+},
+"fate|2020": {
+"name": "Fate",
+"mech": 77,
+"iq": 83,
+"pool": 68,
+"mental": 78,
+"overall": 78,
+"heroes": [
+"Orisa",
+"Winston"
+],
+"minutes": 1176,
+"maps": 100,
+"low": false,
+"src": "OWL 2020 · 1176 分钟 / 100 张图"
+},
+"leejaegon|2020": {
+"name": "Leejaegon",
+"mech": 77,
+"iq": 82,
+"pool": 84,
+"mental": 77,
+"overall": 80,
+"heroes": [
+"Brigitte",
+"Lúcio",
+"Mercy",
+"Baptiste"
+],
+"minutes": 1539,
+"maps": 127,
+"low": false,
+"src": "OWL 2020 · 1539 分钟 / 127 张图"
+},
+"guxue|2020": {
+"name": "Guxue",
+"mech": 76,
+"iq": 79,
+"pool": 76,
+"mental": 80,
+"overall": 78,
+"heroes": [
+"Orisa",
+"Winston",
+"Reinhardt"
+],
+"minutes": 1211,
+"maps": 101,
+"low": false,
+"src": "OWL 2020 · 1211 分钟 / 101 张图"
+},
+"viol2t|2020": {
+"name": "Viol2t",
+"mech": 88,
+"iq": 80,
+"pool": 90,
+"mental": 81,
+"overall": 84,
+"heroes": [
+"Baptiste",
+"Zenyatta",
+"Moira",
+"Ana",
+"Brigitte"
+],
+"minutes": 1438,
+"maps": 123,
+"low": false,
+"src": "OWL 2020 · 1438 分钟 / 123 张图"
+},
+"fearless|2021": {
+"name": "Fearless",
+"mech": 86,
+"iq": 81,
+"pool": 76,
+"mental": 84,
+"overall": 82,
+"heroes": [
+"Winston",
+"Reinhardt",
+"Wrecking Ball"
+],
+"minutes": 1895,
+"maps": 147,
+"low": false,
+"src": "OWL 2021 · 1895 分钟 / 147 张图"
+},
+"kevster|2021": {
+"name": "Kevster",
+"mech": 84,
+"iq": 88,
+"pool": 76,
+"mental": 87,
+"overall": 84,
+"heroes": [
+"Tracer",
+"Echo",
+"Mei"
+],
+"minutes": 1148,
+"maps": 98,
+"low": false,
+"src": "OWL 2021 · 1148 分钟 / 98 张图"
+},
+"shu|2021": {
+"name": "Shu",
+"mech": 83,
+"iq": 78,
+"pool": 84,
+"mental": 80,
+"overall": 81,
+"heroes": [
+"Baptiste",
+"Ana",
+"Zenyatta",
+"Moira"
+],
+"minutes": 1245,
+"maps": 107,
+"low": false,
+"src": "OWL 2021 · 1245 分钟 / 107 张图"
+},
+"smurf|2021": {
+"name": "Smurf",
+"mech": 82,
+"iq": 79,
+"pool": 68,
+"mental": 79,
+"overall": 78,
+"heroes": [
+"Winston",
+"Orisa"
+],
+"minutes": 469,
+"maps": 39,
+"low": false,
+"src": "OWL 2021 · 469 分钟 / 39 张图"
+},
+"izayaki|2021": {
+"name": "Izayaki",
+"mech": 82,
+"iq": 80,
+"pool": 84,
+"mental": 82,
+"overall": 82,
+"heroes": [
+"Ana",
+"Zenyatta",
+"Baptiste",
+"Moira"
+],
+"minutes": 1551,
+"maps": 128,
+"low": false,
+"src": "OWL 2021 · 1551 分钟 / 128 张图"
+},
+"lip|2021": {
+"name": "Lip",
+"mech": 85,
+"iq": 87,
+"pool": 90,
+"mental": 82,
+"overall": 86,
+"heroes": [
+"Sombra",
+"Ashe",
+"Cassidy",
+"Reaper",
+"Tracer"
+],
+"minutes": 1535,
+"maps": 127,
+"low": false,
+"src": "OWL 2021 · 1535 分钟 / 127 张图"
+},
+"void|2021": {
+"name": "Void",
+"mech": 85,
+"iq": 92,
+"pool": 68,
+"mental": 85,
+"overall": 85,
+"heroes": [
+"D.Va",
+"Sigma"
+],
+"minutes": 1639,
+"maps": 136,
+"low": false,
+"src": "OWL 2021 · 1639 分钟 / 136 张图"
+},
+"diem|2021": {
+"name": "Diem",
+"mech": 80,
+"iq": 79,
+"pool": 58,
+"mental": 79,
+"overall": 75,
+"heroes": [
+"Ashe"
+],
+"minutes": 104,
+"maps": 9,
+"low": true,
+"src": "OWL 2021 · 104 分钟 / 9 张图"
+},
+"leave|2021": {
+"name": "Leave",
+"mech": 85,
+"iq": 81,
+"pool": 90,
+"mental": 86,
+"overall": 85,
+"heroes": [
+"Tracer",
+"Echo",
+"Hanzo",
+"Sombra",
+"Cassidy"
+],
+"minutes": 1625,
+"maps": 132,
+"low": false,
+"src": "OWL 2021 · 1625 分钟 / 132 张图"
+},
+"alarm|2021": {
+"name": "Alarm",
+"mech": 80,
+"iq": 80,
+"pool": 76,
+"mental": 84,
+"overall": 80,
+"heroes": [
+"Ana",
+"Zenyatta",
+"Baptiste"
+],
+"minutes": 1152,
+"maps": 92,
+"low": false,
+"src": "OWL 2021 · 1152 分钟 / 92 张图"
+},
+"shy|2021": {
+"name": "Shy",
+"mech": 81,
+"iq": 80,
+"pool": 90,
+"mental": 77,
+"overall": 82,
+"heroes": [
+"Echo",
+"Cassidy",
+"Hanzo",
+"Ashe",
+"Sombra"
+],
+"minutes": 760,
+"maps": 62,
+"low": false,
+"src": "OWL 2021 · 760 分钟 / 62 张图"
+},
+"fielder|2022": {
+"name": "Fielder",
+"mech": 78,
+"iq": 79,
+"pool": 90,
+"mental": 79,
+"overall": 82,
+"heroes": [
+"Ana",
+"Brigitte",
+"Kiriko",
+"Baptiste",
+"Zenyatta"
+],
+"minutes": 1824,
+"maps": 150,
+"low": false,
+"src": "OWL 2022 · 1824 分钟 / 150 张图"
+},
+"mer1t|2022": {
+"name": "Mer1t",
+"mech": 82,
+"iq": 83,
+"pool": 90,
+"mental": 82,
+"overall": 84,
+"heroes": [
+"Sojourn",
+"Ashe",
+"Soldier: 76",
+"Tracer",
+"Reaper"
+],
+"minutes": 1825,
+"maps": 154,
+"low": false,
+"src": "OWL 2022 · 1825 分钟 / 154 张图"
+},
+"pelican|2022": {
+"name": "Pelican",
+"mech": 79,
+"iq": 80,
+"pool": 90,
+"mental": 83,
+"overall": 82,
+"heroes": [
+"Genji",
+"Tracer",
+"Reaper",
+"Echo",
+"Sombra"
+],
+"minutes": 1803,
+"maps": 152,
+"low": false,
+"src": "OWL 2022 · 1803 分钟 / 152 张图"
+},
+"hanbin|2022": {
+"name": "Hanbin",
+"mech": 92,
+"iq": 85,
+"pool": 76,
+"mental": 87,
+"overall": 86,
+"heroes": [
+"Junker Queen",
+"Zarya",
+"Sigma"
+],
+"minutes": 1175,
+"maps": 100,
+"low": false,
+"src": "OWL 2022 · 1175 分钟 / 100 张图"
+},
+"mag|2022": {
+"name": "Mag",
+"mech": 81,
+"iq": 78,
+"pool": 76,
+"mental": 83,
+"overall": 80,
+"heroes": [
+"Winston",
+"Junker Queen",
+"Doomfist"
+],
+"minutes": 670,
+"maps": 55,
+"low": false,
+"src": "OWL 2022 · 670 分钟 / 55 张图"
+},
+"chiyo|2023": {
+"name": "ChiYo",
+"mech": 81,
+"iq": 90,
+"pool": 68,
+"mental": 86,
+"overall": 82,
+"heroes": [
+"Brigitte",
+"Lúcio"
+],
+"minutes": 518,
+"maps": 47,
+"low": false,
+"src": "OWL 2023 · 518 分钟 / 47 张图"
+}
+}

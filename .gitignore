@@ -1,0 +1,19 @@
+# 原始下载缓存(可重新抓取)
+data/owl/*.zip
+data/owl/_report.json
+assets/players_raw/
+assets/maps_raw/
+
+# 处理后的图片(assets/heroes/*.webp、assets/maps/*.webp、assets/players/*.webp)保留,
+# 这样 clone 下来直接跑 tools/build.py 就能离线重建 owcs-manager.html
+
+# 临时文件
+_s*.png
+_t*.jpg
+_*.log
+_*.err
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+Thumbs.db
