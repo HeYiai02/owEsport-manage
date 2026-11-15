@@ -939,7 +939,7 @@ function applyCards(cards){
 
 let S = {
   phase:"setup",          // setup | draft | series | mapselect | ban | sim | report | done
-  teamName:"",
+  teamName:"HouseBand",
   budget:BUDGET,
   roster:[],              // 玩家 5 张卡
   oppRoster:[],
@@ -979,7 +979,7 @@ function renderRaw(){
   if(lbl) lbl.textContent = C ? "资金" : "预算";
   const st = document.getElementById("hStage");
   if(st) st.textContent = C ? stageName() : "练习赛";
-  const ht = document.getElementById("hTeam"); if(ht) ht.textContent = S.teamName || "未命名战队";
+  const ht = document.getElementById("hTeam"); if(ht) ht.textContent = S.teamName || "HouseBand";
   const tc = document.getElementById("toolsCard");
   if(tc && tc.style) tc.style.display = (S.phase === "sim") ? "none" : "";
   switch(S.phase){
@@ -1038,7 +1038,7 @@ function renderSetup(){
     <div class="row" style="align-items:flex-end">
       <div class="col" style="max-width:320px">
         <div class="mini" style="margin-bottom:6px">战队名</div>
-        <input id="teamNameIn" value="${S.teamName||"Wishing Well"}"
+        <input id="teamNameIn" value="${S.teamName||"HouseBand"}"
           style="width:100%;padding:9px 12px;background:#0a0e13;border:1px solid var(--line);border-radius:7px;color:var(--txt);font-size:14px;font-family:inherit">
       </div>
       <div>
@@ -1086,7 +1086,7 @@ function renderSetup(){
 
 function startDraft(){
   const el = document.getElementById("teamNameIn");
-  S.teamName = (el && el.value.trim()) || "Wishing Well";
+  S.teamName = (el && el.value.trim()) || "HouseBand";
   S.phase = "draft";
   S.roster = []; S.budget = BUDGET;
   render();
@@ -2945,7 +2945,7 @@ function hardReset(){
   try{ localStorage.removeItem(LSKEY); }catch(e){}
   C = null;
   CAS = {type:"big", bet:10, dice:[1,2,3], rolling:false, last:null};
-  S = {phase:"setup",teamName:"",budget:BUDGET,roster:[],oppRoster:[],difficulty:1,
+  S = {phase:"setup",teamName:"HouseBand",budget:BUDGET,roster:[],oppRoster:[],difficulty:1,
     myMaps:0,oppMaps:0,mapSeq:[],groupsLeft:["Control","HyFlex","PushClash","Escort"],curMap:null,
     bans:[],seriesBans:[],lastLoser:null,aiPick:null,seedHigh:"me",side:{me:"atk",them:"def"},
     myArch:"dive",oppArch:"dive",round:0,
