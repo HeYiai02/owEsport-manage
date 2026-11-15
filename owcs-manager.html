@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OWCS 电竞经理 · 本地版 v0.9.1</title>
+<title>OWCS 电竞经理 · 本地版 v1.0</title>
 <style>
 :root{
   --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --line:#2a3442;
@@ -72,6 +72,24 @@ button.danger.armed{background:#7a1f1f;border-color:#c0392b;color:#fff}
 .tabbar{display:flex;gap:6px;margin:12px 0}
 .tabbar button{background:#161c26;border:1px solid var(--line);color:var(--dim);font-size:12px;padding:7px 16px;border-radius:9px}
 .tabbar button.on{background:var(--gold);border-color:var(--gold);color:#1a1206;font-weight:700}
+/* 赛前排阵容 */
+.lineup{display:flex;flex-direction:column;gap:8px}
+.lrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px}
+.lme{display:flex;align-items:center;gap:8px;min-width:150px}
+.lname{font-size:13px;font-weight:600;display:flex;align-items:baseline;gap:5px}
+.lname .se{font-size:10px;color:var(--dim);font-weight:400}
+.lrole{font-size:10px;color:var(--dim)}
+.lhero{min-width:120px;font-size:12px}
+.hcur{display:inline-flex;align-items:center;gap:6px}
+.hcur img{width:26px;height:26px;border-radius:6px;object-fit:cover}
+.lchips{display:flex;flex-wrap:wrap;gap:5px;flex:1 1 320px}
+.lineup .hchip{width:58px}
+.lineup .hchip img{height:46px}
+.lineup .hchip .nm{font-size:8.5px;line-height:1.15;padding:2px 1px 3px;text-align:center}
+.lineup .hchip.sel{outline:2px solid var(--gold);outline-offset:1px;background:rgba(240,180,60,.12)}
+.lineup .hchip.void{opacity:.35}
+.lmore button.mini{padding:3px 8px;font-size:11px;background:#1b2130;border:1px solid var(--line);color:var(--dim);border-radius:6px;cursor:pointer}
+.btnrow{display:flex;gap:10px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap}
 .pcard{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--line);border-radius:11px;background:#10151d;margin-bottom:8px}
 .pcard .nm{width:110px;font-size:13px}
 .pcard .nm small{display:block;color:var(--dim);font-size:10px}
@@ -327,7 +345,7 @@ textarea{width:100%;height:220px;background:#0a0e13;color:#c9d1d9;border:1px sol
 <div class="wrap">
   <div class="top">
     <div>
-      <h1>OWCS <span>电竞经理</span> · 本地版 v0.9.1</h1>
+      <h1>OWCS <span>电竞经理</span> · 本地版 v1.0</h1>
       <div class="sub">纯本地单文件 · 无服务器 · 数据存 localStorage · 选手=赛季快照</div>
     </div>
     <div class="meta">
@@ -424,7 +442,10 @@ const HEROES = [
 const HERO_BY_NAME = {}; HEROES.forEach(function(h){ HERO_BY_NAME[h.name] = h; });
 
 // 已被改过职责的英雄(用于「时代错位」提示)
-const ROLE_SHIFT = { "Sombra":{from:"dps",to:"sup",season:2026} };
+const ROLE_SHIFT = {
+  "Sombra":  { from:"dps", to:"sup",  season:2026 },
+  "Doomfist":{ from:"dps", to:"tank", season:2022 }
+};
 
 // 地图
 const MAPS = [
@@ -750,13 +771,13 @@ const BASE_PLAYERS = [
   // ===== 输出 =====
   P("Carpe",2018,"dps",84,85,76,78,["Widowmaker","Tracer","Cassidy"],"费城枪神"),
   P("Fleta",2018,"dps",80,77,90,80,["Widowmaker","Genji","Pharah","Soldier: 76","Cassidy"],"全能型,英雄池极宽"),
-  P("Profit",2018,"dps",85,88,90,85,["Tracer","Junkrat","Genji","Brigitte","Hanzo"],"伦敦喷火,猎空刺客"),
+  P("Profit",2018,"dps",85,88,90,85,["Tracer", "Junkrat", "Genji", "Hanzo", "Pharah"],"伦敦喷火,猎空刺客"),
   P("Birdring",2018,"dps",78,78,90,81,["Widowmaker","Tracer","Cassidy","Genji","Soldier: 76"],"枪位与刺客兼顾"),
   P("Sparkle",2019,"dps",92,80,54,74,["Genji","Pharah","Doomfist"],"天才疯子,上限与下限一样极端"),
-  P("Decay",2020,"dps",86,83,90,84,["Zarya","Tracer","Ashe","Reaper","Cassidy"],"对枪与切入都敢做"),
+  P("Decay",2020,"dps",86,83,90,84,["Tracer", "Ashe", "Reaper", "Cassidy", "Widowmaker"],"对枪与切入都敢做"),
   P("Lip",2021,"dps",85,87,90,82,["Sombra","Ashe","Cassidy","Reaper","Tracer"],"黑影体系的大脑"),
   P("Shy",2021,"dps",81,80,90,77,["Echo","Cassidy","Hanzo","Ashe","Sombra"],"中国输出的代表人物之一"),
-  P("Diem",2021,"dps",80,79,58,79,["Ashe"],"纯枪位,一枪定生死"),
+  P("Diem",2021,"dps",80,79,58,79,["Ashe", "Cassidy"],"纯枪位,一枪定生死"),
   P("Leave",2021,"dps",85,81,90,86,["Tracer","Echo","Hanzo","Sombra","Cassidy"],"2021 OWL MVP,中国最强自由人"),
   P("Kevster",2021,"dps",84,88,76,87,["Tracer","Echo","Mei"],"欧洲天才,切入角度刁钻"),
   P("Mer1t",2022,"dps",82,83,90,82,["Sojourn","Ashe","Soldier: 76","Tracer","Reaper"],"索杰恩时代的枪位答案"),
@@ -765,7 +786,7 @@ const BASE_PLAYERS = [
   P("Heesang",2025,"dps",91,88,82,82,["Tracer","Sombra","Genji"],"英雄池极宽的现代输出"),
 
   // ===== 支援 =====
-  P("Ryujehong",2018,"sup",80,80,84,78,["Zenyatta","Winston","Moira","Mercy"],"初代辅助之神"),
+  P("Ryujehong",2018,"sup",80,80,84,78,["Zenyatta", "Moira", "Mercy", "Ana"],"初代辅助之神"),
   P("Jjonak",2018,"sup",89,83,68,87,["Zenyatta","Moira"],"禅雅塔改写了支援的定义"),
   P("Moth",2019,"sup",77,86,76,83,["Lúcio","Baptiste","Mercy"],"团队型辅助,站位大师"),
   P("Twilight",2019,"sup",89,84,76,85,["Zenyatta","Ana","Moira"],"数据怪,后排发动机"),
@@ -789,26 +810,26 @@ const BASE_PLAYERS = [
   P("Cjay",2026,"sup",82,86,74,82,["Ana","Baptiste"],"Dallas Fuel"),
   P("Lukemino",2026,"sup",80,84,72,78,["Lúcio","Kiriko"],"Dallas Fuel"),
   P("Smurf",2026,"tank",90,87,70,84,["Winston","D.Va","Reinhardt"],"Disguised"),
-  P("PGE",2026,"dps",87,82,64,76,["Tracer","Sombra"],"Disguised"),
+  P("PGE",2026,"dps",87,82,64,76,["Tracer", "Genji"],"Disguised"),
   P("ryan",2026,"dps",86,80,62,74,["Sojourn","Tracer"],"Disguised"),
   P("Hawk",2026,"tank",86,84,70,80,["Roadhog","D.Va","Sigma"],"Spacestation"),
-  P("Lethal",2026,"dps",86,80,62,74,["Tracer","Sombra"],"Spacestation"),
+  P("Lethal",2026,"dps",86,80,62,74,["Tracer", "Sojourn"],"Spacestation"),
   P("Sugarfree",2026,"dps",85,80,60,74,["Sojourn","Tracer"],"Spacestation"),
   P("Galaa",2026,"sup",86,84,70,78,["Ana","Kiriko"],"Spacestation"),
   P("Admiral",2026,"sup",82,82,66,76,["Ana","Kiriko"],"Spacestation"),
   P("Painkiller",2026,"tank",84,82,60,76,["Winston","D.Va"],"NTMR"),
-  P("Rokit",2026,"dps",84,78,58,72,["Tracer","Sombra"],"NTMR"),
+  P("Rokit",2026,"dps",84,78,58,72,["Tracer", "Soldier: 76"],"NTMR"),
   P("JUTSU",2026,"dps",84,78,58,72,["Sojourn","Genji"],"NTMR"),
   P("Virtual",2026,"sup",80,82,66,74,["Lúcio","Kiriko"],"NTMR"),
   P("Lep",2026,"sup",80,80,64,74,["Ana","Baptiste"],"NTMR"),
   P("TVNT",2026,"tank",87,84,68,80,["D.Va","Winston"],"Twisted Minds"),
   P("Quartz",2026,"dps",91,84,68,78,["Sojourn","Ashe","Widowmaker"],"Twisted Minds"),
   P("Youbi",2026,"dps",88,82,62,74,["Genji","Echo"],"Twisted Minds"),
-  P("JaeWoo",2026,"dps",87,82,64,76,["Tracer","Sombra"],"Twisted Minds"),
+  P("JaeWoo",2026,"dps",87,82,64,76,["Tracer", "Ashe"],"Twisted Minds"),
   P("Simple",2026,"sup",85,86,74,82,["Ana","Baptiste","Zenyatta"],"Twisted Minds"),
   P("FunnyAstro",2026,"sup",82,88,76,82,["Lúcio","Brigitte","Kiriko"],"Twisted Minds"),
   P("eisgnom",2026,"tank",86,84,68,78,["Reinhardt","Winston","D.Va"],"Virtus.pro"),
-  P("Kevster",2026,"dps",92,86,74,82,["Tracer","Sombra","Genji"],"Virtus.pro"),
+  P("Kevster",2026,"dps",92,86,74,82,["Tracer", "Genji", "Echo"],"Virtus.pro"),
   P("Seicoe",2026,"dps",88,82,64,76,["Sojourn","Ashe"],"Virtus.pro"),
   P("FiXa",2026,"sup",82,84,70,78,["Lúcio","Kiriko"],"Virtus.pro"),
   P("Landon",2026,"sup",84,86,72,80,["Ana","Baptiste","Kiriko"],"Virtus.pro / Al Qadsiah"),
@@ -823,21 +844,21 @@ const BASE_PLAYERS = [
   P("Hanbin",2026,"tank",92,90,78,86,["Sigma","Zarya","Junker Queen"],"Team Falcons"),
   P("Someone",2026,"tank",93,88,72,86,["Winston","D.Va"],"Team Falcons"),
   P("Mer1t",2026,"dps",92,86,70,82,["Sojourn","Widowmaker","Ashe"],"Team Falcons"),
-  P("SP1NT",2026,"dps",88,84,68,78,["Tracer","Genji","Sombra"],"Team Falcons"),
+  P("SP1NT",2026,"dps",88,84,68,78,["Tracer", "Genji", "Reaper"],"Team Falcons"),
   P("Checkmate",2026,"dps",87,82,64,74,["Symmetra","Genji"],"Team Falcons / Al Qadsiah"),
   P("Fielder",2026,"sup",86,92,78,88,["Ana","Baptiste"],"Team Falcons"),
   P("ChiYo",2026,"sup",86,90,78,86,["Lúcio","Kiriko"],"Team Falcons"),
   P("JunBin",2026,"tank",90,86,72,82,["Wrecking Ball","Sigma","Winston"],"Crazy Raccoon"),
   P("MAX",2026,"tank",86,84,66,78,["D.Va","Winston"],"Crazy Raccoon"),
-  P("STALK3R",2026,"dps",92,86,72,82,["Tracer","Genji","Sombra"],"Crazy Raccoon"),
+  P("STALK3R",2026,"dps",92,86,72,82,["Tracer", "Genji", "Sojourn"],"Crazy Raccoon"),
   P("Heesang",2026,"dps",91,88,74,82,["Tracer","Sojourn"],"Crazy Raccoon"),
-  P("Lip",2026,"dps",91,92,74,86,["Sombra","Ashe","Tracer"],"Crazy Raccoon"),
+  P("Lip",2026,"dps",91,92,74,86,["Ashe", "Tracer", "Widowmaker"],"Crazy Raccoon"),
   P("CH0R0NG",2026,"sup",84,86,72,80,["Lúcio","Kiriko","Brigitte"],"Crazy Raccoon"),
   P("vigilante",2026,"sup",84,88,74,82,["Ana","Baptiste","Zenyatta"],"Crazy Raccoon"),
   P("Bernar",2026,"tank",86,84,66,78,["Sigma","Zarya"],"ZETA DIVISION"),
   P("Mealgaru",2026,"tank",84,82,64,76,["Winston","D.Va"],"ZETA DIVISION"),
   P("Proper",2026,"dps",94,90,80,86,["Tracer","Genji","Sojourn"],"ZETA DIVISION"),
-  P("knife",2026,"dps",88,84,66,78,["Sombra","Tracer"],"ZETA DIVISION"),
+  P("knife",2026,"dps",88,84,66,78,["Tracer", "Genji"],"ZETA DIVISION"),
   P("Shu",2026,"sup",88,90,76,84,["Ana","Baptiste","Kiriko"],"ZETA DIVISION"),
   P("Viol2t",2026,"sup",86,92,76,86,["Baptiste","Zenyatta"],"ZETA DIVISION"),
   P("Guxue",2026,"tank",90,86,70,80,["Winston","D.Va","Reinhardt"],"Weibo Gaming"),
@@ -995,6 +1016,7 @@ function renderRaw(){
     case "career":  renderCareer();  break;
     case "casino":  renderCasino();  break;
     case "arch":    break;
+    case "lineup":  renderLineup();  break;
     default:
       S.phase = "setup";
       renderSetup();
@@ -1167,8 +1189,8 @@ function cardHTML(p, need){
         <div class="cost">$${c}</div>
       </span>
     </div>
-    <div class="hs">${p.heroes.map(h => (HERO_BY_NAME[h] && HERO_BY_NAME[h].role !== p.role)
-        ? `<span class="off" title="2026 已改到这个位置,这位选手用不了">${h}</span>` : h).join(" / ")}</div>
+    <div class="hs">${p.heroes.map(h => (HERO_BY_NAME[h] && !heroUsableBy(p, h))
+        ? `<span class="off" title="这个英雄现在不是他的位置,用不了">${h}</span>` : h).join(" / ")}</div>
     ${srcOf(p).startsWith("OWL")?`<div class="srcs" title="数值来自 OWL 官方 Stats Lab 逐图数据">▣ ${srcOf(p)}</div>`:""}
     ${cant?`<div class="warn" style="font-size:10px;margin-top:3px">${pickBlocker(p)}</div>`
       :(dup?`<div class="warn" style="font-size:10px;margin-top:3px">已在阵中</div>`:"")}
@@ -1684,6 +1706,17 @@ const MODE_RULE = {
 function ruleOf(mode){ return MODE_RULE[mode] || MODE_RULE.Control; }
 
 /* ---------- 英雄分配:每人一个,队内不重复、不用被 ban 的 ---------- */
+// 这个英雄对"这张卡"来说算哪个位置 —— 老卡按当年的规则
+function heroRoleFor(p, h){
+  const H = HERO_BY_NAME[h];
+  if(!H) return null;
+  const sh = ROLE_SHIFT[h];
+  if(sh && p.season < sh.season && p.role === sh.from) return sh.from;
+  return H.role;
+}
+function heroUsableBy(p, h){
+  return heroRoleFor(p, h) === p.role;
+}
 function heroArch(name){ const h = HERO_BY_NAME[name]; return h ? h.arch : null; }
 
 function assignHeroes(roster, arch, bans){
@@ -1695,7 +1728,7 @@ function assignHeroes(roster, arch, bans){
   order.forEach(({p,i})=>{
     const pool = (p.heroes||[]).filter(h=>{
       const H = HERO_BY_NAME[h];
-      return H && !banned.has(h) && !used.has(h) && H.role === p.role;
+      return H && !banned.has(h) && !used.has(h) && heroUsableBy(p, h);
     });
     pool.sort((a,b)=> (heroArch(b)===arch ? 1 : 0) - (heroArch(a)===arch ? 1 : 0));
     if(pool.length){ used.add(pool[0]); out[i] = {hero:pool[0], offPool:false}; return; }
@@ -1959,7 +1992,7 @@ function chooseArch(){
 function archFit(roster,arch){
   let hit = 0, total = 0;
   roster.forEach(p => p.heroes.forEach((h,i) => {
-    const hero = HERO_BY_NAME[h]; if(!hero) return;
+    const hero = HERO_BY_NAME[h]; if(!hero || !heroUsableBy(p, h)) return;
     const w = i===0 ? 3 : i===1 ? 2 : 1;
     total += w;
     if(hero.arch === arch && !S.bans.some(b => b.hero === h)) hit += w;
@@ -1975,9 +2008,94 @@ function pickArch(a){
     if(f > bestFit){ bestFit = f; best = x; }
   }
   S.oppArch = best;
+  S.lineupMore = {};
+  autoLineup();
+  S.phase = "lineup";
+  render();
+}
+
+/* ---------- 赛前排阵容 ---------- */
+function autoLineup(){
+  S.heroPick = assignHeroes(S.roster, S.myArch, S.bans).map(function(a){ return a.hero; });
+}
+
+function heroTakenBy(i, h){
+  return (S.heroPick||[]).some(function(x,j){ return j !== i && x === h; });
+}
+
+function isBanned(h){
+  return (S.bans||[]).some(function(b){ return b.hero === h; });
+}
+
+function pickHero(i, h){
+  if(isBanned(h)) return;
+  if(heroTakenBy(i, h)) return;
+  if(!S.heroPick) autoLineup();
+  S.heroPick[i] = h;
+  render();
+}
+
+function toggleMore(i){
+  S.lineupMore = S.lineupMore || {};
+  S.lineupMore[i] = !S.lineupMore[i];
+  render();
+}
+
+function heroChip(i, h, cur){
+  const H = HERO_BY_NAME[h];
+  const banned = isBanned(h);
+  const taken  = heroTakenBy(i, h);
+  const sel    = cur === h;
+  const cls = "hchip" + (sel ? " sel" : "") + (banned ? " dead" : "") + (taken && !sel ? " void" : "");
+  const tip = banned ? "被 ban" : (taken && !sel ? "队友已选" : (sel ? "当前" : "选他"));
+  return `<div class="${cls}" title="${tip}" onclick="pickHero(${i},'${h.replace(/'/g,"\\'")}')">
+    ${heroImg(h)?`<img src="${heroImg(h)}" alt="">`:""}
+    <span class="nm">${h}</span></div>`;
+}
+
+function renderLineup(){
+  const banned = (S.bans||[]).map(b=>b.hero);
+  const rows = S.roster.map(function(p,i){
+    const cur = (S.heroPick||[])[i];
+    const pool = (p.heroes||[]).filter(function(h){ return heroUsableBy(p, h); });
+    const more = (S.lineupMore||{})[i];
+    const extra = more ? HEROES.filter(h=>h.role===p.role).map(h=>h.name)
+      .filter(h=>pool.indexOf(h) < 0) : [];
+    const offPool = cur && pool.indexOf(cur) < 0;
+    return `<div class="pcard lrow">
+      <div class="lme">${av(p.name,true)}<div><div class="lname">${p.name}<span class="se">${p.season}</span></div>
+        <div class="lrole">${ROLE_CN[p.role]}</div></div></div>
+      <div class="lhero">${cur?`<span class="hcur">${heroImg(cur)?`<img src="${heroImg(cur)}" alt="">`:""}${cur}</span>`:"<span class='warn'>未选</span>"}
+        ${offPool?`<span class="warn" style="font-size:11px">(非招牌 · 效果打折)</span>`:""}</div>
+      <div class="lchips">${(pool.concat(extra)).map(function(h){ return heroChip(i,h,cur); }).join("")}</div>
+      <div class="lmore"><button class="mini" onclick="toggleMore(${i})">${more?"收起":"＋其他"}</button></div>
+    </div>`;
+  }).join("");
+  app.innerHTML = `
+  <div class="card">
+    <h2>赛前排阵容 · ${S.curMap.name}</h2>
+    <p class="hint">体系:${ARCH_CN[S.myArch]} · ${ruleOf(S.curMap.mode).tag}
+      ${banned.length?` · 本图禁用:${banned.join(" / ")}`:" · 本图无 ban"}</p>
+    <p class="hint">每人挑一个英雄。同一队不能撞英雄,被 ban 的不能用;点「＋其他」可以从同位置英雄里硬选,但<b class="warn">不是他的招牌,效果会打折</b>。</p>
+    <div class="sep"></div>
+    <div class="lineup">${rows}</div>
+    <div class="btnrow">
+      <button class="ghost" onclick="autoLineup();render()">自动分配</button>
+      <button onclick="startMatch()">开打 →</button>
+    </div>
+  </div>`;
+}
+
+function startMatch(){
+  const pick = (S.heroPick||[]).slice();
+  if(pick.length !== S.roster.length || pick.some(h=>!h)) autoLineup();
+  S.myAssign = S.heroPick.map(function(h,i){
+    const p = S.roster[i];
+    return { hero:h, offPool:(p.heroes||[]).indexOf(h) < 0 };
+  });
   S.phase = "sim"; S.simDone = false;
   render();
-  setTimeout(() => playMap(), 60);
+  playMap();
 }
 
 function playMap(){
@@ -1985,7 +2103,9 @@ function playMap(){
   const mode = S.curMap.mode;
   const rule = ruleOf(mode);
 
-  S.myAssign  = assignHeroes(S.roster,    S.myArch,  S.bans);
+  S.myAssign  = (S.heroPick && S.heroPick.length === S.roster.length && S.heroPick.every(function(h){return !!h;}))
+    ? S.heroPick.map(function(h,i){ return { hero:h, offPool:(S.roster[i].heroes||[]).indexOf(h) < 0 }; })
+    : assignHeroes(S.roster, S.myArch, S.bans);
   S.oppAssign = assignHeroes(S.oppRoster, S.oppArch, S.bans);
 
   const myPower  = teamPower(S.roster,    S.myArch,  S.myAssign,  S.bans);
@@ -2858,7 +2978,7 @@ function loadLocal(){
       if(["arch","sim","mapselect","banorder","ban"].includes(S.phase)){
         S.phase="series"; S.log=[]; S.simDone=false; S.aiPick=null;
       }
-      const KNOWN = ["setup","draft","series","mapselect","banorder","ban","sim","report","done","career","casino","arch"];
+      const KNOWN = ["setup","draft","series","mapselect","banorder","ban","sim","report","done","career","casino","arch","lineup"];
       if(KNOWN.indexOf(S.phase) < 0){ S.phase = "setup"; S.roster = []; }
       if(!S.mapSeq) S.mapSeq=[];
       if(!S.seriesBans) S.seriesBans=[];

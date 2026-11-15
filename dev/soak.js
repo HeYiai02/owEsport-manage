@@ -74,6 +74,7 @@ const SOAK = `
                - (archFit(S.roster,a) + MODE_AFFINITY[S.curMap.mode][a]*8);
         })[0];
         pickArch(best);
+        if (S.phase === "lineup") startMatch();
         if (!S.curMapResult) break;
         mySum += S.curMapResult.myPower;
         oppSum += S.curMapResult.oppPower;

@@ -209,6 +209,9 @@ const TEST = `
     autoBan();
     assert(S.phase === "arch", "ban 后未进入 arch, 实际 " + S.phase);
     pickArch(arch || "dive");
+    assert(S.phase === "lineup", "选完体系未进入排阵容, 实际 " + S.phase);
+    assert(S.heroPick && S.heroPick.length === S.roster.length, "默认阵容未生成");
+    startMatch();
     assert(S.curMapResult, "无比赛结果");
     afterMap();
   }
@@ -245,6 +248,23 @@ const TEST = `
 
   step("选体系 -> 模拟 -> 复盘", function(){
     pickArch("dive");
+    assert(S.phase === "lineup", "未进入排阵容, 实际 " + S.phase);
+    assert(S.heroPick && S.heroPick.length === S.roster.length, "默认阵容未生成");
+    // --- 赛前排阵容 ---
+    var bHero = (S.bans[0] || {}).hero;
+    var keep = S.heroPick[0];
+    // 撞队友:换成 1 号位正在用的英雄 → 必须被拒
+    var mate = S.heroPick[1];
+    if (mate) { pickHero(0, mate); assert(S.heroPick[0] === keep, "允许了同队撞英雄 " + mate); }
+    // 被 ban 的英雄 → 必须被拒
+    if (bHero && bHero !== keep) { pickHero(0, bHero); assert(S.heroPick[0] === keep, "允许了选被 ban 的 " + bHero); }
+    // 换一个同位置、没人用、没被 ban 的 → 必须生效
+    var cand = HEROES.filter(function(h){
+      return h.role === S.roster[0].role && !isBanned(h.name) && !heroTakenBy(0, h.name);
+    })[0];
+    if (cand) { pickHero(0, cand.name); assert(S.heroPick[0] === cand.name, "手动换英雄没生效"); }
+    console.log("    赛前排阵容 " + S.heroPick.join(" / ") + " ✓ 撞队友与被 ban 都被拒");
+    startMatch();
     var r = S.curMapResult;
     var rule = MODE_RULE[r.mode];
     assert(r.my >= 0 && r.opp >= 0, "比分异常");
